@@ -4,7 +4,6 @@ const debug = require('debug')('app');
 const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
-const passport = require('passport');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
@@ -23,8 +22,9 @@ app.use(express.static(path.join(__dirname, '/public/')));
 app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
+app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/css')));
 app.set('views', './src/views');
-app.set('img', 'img');
+app.set('img', '/img');
 app.set('view engine', 'ejs');
 
 const nav = [
@@ -58,7 +58,7 @@ app.get('/', (req, res) => {
 
 app.get('/', (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Ти в бібліотеці')
+  res.end('Ти в бібліотеці');
 });
 
 app.listen(port, () => {

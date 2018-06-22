@@ -11,7 +11,7 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="../css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 <header class="navbar navbar-bright navbar-fixed-top" role="banner">
@@ -58,7 +58,8 @@
       <div class="col-md-5">
         <div class="well well-lg"> 
           <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 img-container">
+              <img src="https://herramientasinformaticasedwardrivero.files.wordpress.com/2015/05/cropped-logo-techcol11.png" alt="main logo">
             </div>
           </div>
         </div>
@@ -81,16 +82,33 @@
           <!--/stories-->
           <div class="row">    
             <br>
-            <div class="col-md-2 col-sm-3 text-center">
-              Залогуйся! або <a href='/auth/signin'>Зареєструйся</a>
-              <form name="signUpForm" action="/auth/signUp" method="post">
-                Логін: <input name="username" id="username"/><br/>
-                Пароль: <input name="password" id="password"/><br/>
-                <input type="submit" value="Зареєструйся" />
-              </form>
+            
+            <div class="col-md-5 col-sm-3 text-center">
+              <label>Зареєструйся! або <a href='/auth/signin' class="btn btn-info">Залогуйся</a></label>
+              <hr>
+              <form name="signUpForm" action="/auth/signUp" method="post" class="form-horizontal">
+                <div class="form-group">
+                  <label for="username" class="col-sm-3 control-label">Логін:</label>
+                  <div class="col-sm-8">
+                    <input type="username" class="form-control" id="username" placeholder="username">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="Password" class="col-sm-3 control-label">Пароль:</label>
+                  <div class="col-sm-8">
+                    <input type="password" class="form-control" id="Password" placeholder="Password">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2">
+                    <button type="submit" class="btn btn-default">Зареєструватись</button>
+                  </div>
+                </div>
+              </form> 
             </div>
           </div>
           <hr>
+
         </div>
       </div>                                                                                                                                                                     
    	</div><!--/col-12-->
@@ -101,14 +119,12 @@
 <div class="container" id="footer">
   <div class="row">
     <div class="col col-sm-12">
-      
       <h1>Слідкуй за нами</h1>
       <div class="btn-group">
        <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
 	   <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
 	   <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
       </div>
-      
     </div>
   </div>
 </div>
@@ -124,7 +140,6 @@
           <li><i class="icon-google-plus icon-2x"></i></li>
           <li><i class="icon-pinterest icon-2x"></i></li>
         </ul>
-        
       </div>
       <div class="col-sm-6">
           <p class="pull-right">2009-2018 Технічний коледж Національного університету "Львівська політехніка"</a></p>      

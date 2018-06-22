@@ -36,7 +36,7 @@ function router(nav) {
     .get((req, res) => {
       res.render('signin', {
         nav,
-        title: 'Sign In'
+        title: 'Залогуватись'
       });
     })
     .post(passport.authenticate('local', {
