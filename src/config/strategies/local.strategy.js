@@ -9,7 +9,8 @@ module.exports = function localStrategy() {
       usernameField: 'username',
       passwordField: 'password'
     }, (username, password, done) => {
-      const url = 'mongodb://localhost:27017';
+      // const url = 'mongodb://localhost:27017';
+      const url = 'mongodb://<dbuser>:<dbpassword>@ds161790.mlab.com:61790/remotedblist';
       const dbName = 'libraryApp';
       (async function mongo() {
         let client;
